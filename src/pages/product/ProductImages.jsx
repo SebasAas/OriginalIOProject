@@ -18,7 +18,12 @@ function ProductImages({ currentProduct, setProductCart }) {
   const [colorSelected, setColorSelected] = useState();
   const [sizeSelected, setSizeSelected] = useState();
   const [showModal, setShowModal] = useState(false);
-  const [className, setClassName] = useState("color__palette__colors");
+  const [border,] = useState("2px solid #DE8F75");
+  const [backgroundcolor,] = useState("#E29D86");
+  const [textcolor,] = useState('white');
+  const [isActiveColor, setIsActiveColor] = useState();
+  const [isActiveSize, setIsActiveSize] = useState();
+  const [className,] = useState("color__palette__colors");
   let allBox;
   let containerHeight;
   let margin = 30;
@@ -32,18 +37,19 @@ function ProductImages({ currentProduct, setProductCart }) {
     return () => {
       setSizeSelected();
       setColorSelected();
+      setIsActiveColor();
+      setIsActiveSize();
     }
   }, [currentProduct])
 
   const setColorProduct = (e) => {
+    setIsActiveColor(e.target.getAttribute('value'))
     setColorSelected(e.target.getAttribute('value'));
-    // setClassName("color__palette__colors active");
-    console.log(e.currentTarget.id);
   }
 
   const setSizeProduct = (e) => {
-    setSizeSelected(e.currentTarget.innerText)
-    console.log(e.currentTarget.innerText);
+    setIsActiveSize(parseInt(e.currentTarget.innerText));
+    setSizeSelected(e.currentTarget.innerText);
   }
 
   const colorsAvailables = () => {
@@ -52,7 +58,8 @@ function ProductImages({ currentProduct, setProductCart }) {
       return (
         <div className="product__info__colors__availables">
           {Object.entries(colors).map(color => (
-            <div key={color[1]} className={className} onClick={(e) => setColorProduct(e)} value={color[0]} style={{ backgroundColor: color[1] }}></div>
+            <div key={color[1]} className={className} onClick={(e) => setColorProduct(e)} value={color[0]}
+              style={{ backgroundColor: color[1], border: (isActiveColor === color[0] ? border : "none") }}></div>
           ))}
         </div>
       )
@@ -67,7 +74,9 @@ function ProductImages({ currentProduct, setProductCart }) {
     return (
       <div className="product__info__size__available">
         {sizes.map(size => (
-          <div key={size} onClick={(e) => setSizeProduct(e)} className="product__info__size">{size}</div>
+          <div key={size} onClick={(e) => setSizeProduct(e)}
+            style={{ backgroundColor: (isActiveSize === size ? backgroundcolor : "white"), color: (isActiveSize === size ? textcolor : "black") }}
+            className="product__info__size">{size}</div>
         ))}
       </div>
     )

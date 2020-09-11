@@ -66,9 +66,6 @@ function ProductInfo({ currentProduct, setProductCart }) {
   }
 
   const sizesAvailables = () => {
-
-    // 
-
     return (
       <div className="product__info__size__available">
         {sizes.map(size => (
