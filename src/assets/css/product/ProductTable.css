@@ -1,0 +1,17 @@
+.product__table__wrapper {
+  display: flex
+}
+
+.product__table__container__info__image {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 553px;
+}
+
+@media (min-width: 0px) and (max-width: 790px) {
+  .product__table__container__info__image {
+    justify-content: center;
+    height: 100%;
+  }
+}

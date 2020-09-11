@@ -1,0 +1,104 @@
+.stand__page__wrapper {
+  margin: 0px 30px 0px 30px;
+  margin-top: 80px;
+}
+
+.stand__page__title {
+  color: #DE8F75;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.stand__page__overflow {
+  width: 100%;
+}
+
+.stand__page__product__wrapper {
+  display: flex;
+}
+
+.stand__page__product__data > img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.stand__page__product__info {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.stand__page__btn__prev__next__wrapper {
+  display: flex;
+  justify-content: center
+}
+
+.stand__page__btn__prev__next {
+  border: 2px solid rgb(42, 90, 117);
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stand__page__pagination {
+  margin: 0px 15px 0px 15px;
+  text-align: center;
+}
+
+
+/* Aca termina  */
+
+
+.thumbnail-slider{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+	width: 100%;
+	/* float: left; */
+	overflow: hidden;
+}
+
+.thumbnail-slider .thumbnail-container{
+	width: 100%;
+	float: left;
+	transition: margin 1s ease;
+}
+
+.thumbnail-slider .item{
+  height: auto;
+  float: left;
+}
+
+.thumbnail-slider .controls{
+	width: 100%;
+	float: left;
+	padding:15px;
+}
+
+.thumbnail-slider .controls ul{
+	display: block;
+	text-align: center;
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+
+.thumbnail-slider .controls ul li{
+	height: 35px;
+	width: 35px;
+	border:1px solid #c3c3c3;
+	margin:4px;
+	display: inline-block;
+	line-height: 33px;
+	cursor: pointer;
+}
+
+.thumbnail-slider .controls ul li.active{
+	background-color: green;
+	color:#ffffff;
+}

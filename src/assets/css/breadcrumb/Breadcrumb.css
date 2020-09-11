@@ -1,0 +1,30 @@
+.breadcrumb__wrapper {
+  padding-left: 15px;
+}
+
+.breadcrumb__list {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+.breadcrumb__list > li {
+  display: inline;
+  color: #AEB6C1;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.breadcrumb__list > li+li:before {
+  padding-left: 7px;
+  content: "/\00a0";
+}
+
+.breadcrumb__list > li > a {
+  color: #AEB6C1;
+  text-decoration: none;
+}
+
+.breadcrumb__list > li > a:hover {
+  color: #878d96;
+  text-decoration: underline;
+}

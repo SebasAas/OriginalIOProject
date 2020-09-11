@@ -1,0 +1,16 @@
+.cart__wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.cart__wrapper > button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+.cart__value {
+  padding-left: 10px;
+}

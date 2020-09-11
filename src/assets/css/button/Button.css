@@ -1,0 +1,9 @@
+.button__style {
+  background-color: rgb(50, 145, 123);
+  border-radius: 3px;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  width: 100%;
+  font-size: 18px;
+}

@@ -1,0 +1,18 @@
+.color__palette__colors {
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.active {
+  border-width: 10px;
+  border: 3px solid #DE8F75;
+}
+
+.color__palette__mini__wrapper {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%; 
+  margin: 5px 3px 0px 3px
+}

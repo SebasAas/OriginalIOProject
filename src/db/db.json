@@ -1,0 +1,158 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Rastreira Tira Dedo",
+      "code": "RT 0568 | 03.07.0653",
+      "price": "55.20",
+      "discount": "69.00",
+      "colors": {
+        "fucsia": "#A9095E",
+        "green": "#2A5A75",
+        "brown": "#A14830",
+        "black": "#000000"
+      },
+      "sizes": [
+        33,
+        34,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "videos": [
+        "prod01.png"
+      ],
+      "images": [
+        "prod01.png",
+        "prod02.png",
+        "prod03.png",
+        "prod04.png"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Bolsa Prüne",
+      "code": "RT 0569 | 03.07.0653",
+      "price": "204.90",
+      "discount": "",
+      "colors": {
+        "fucsia": "#A9095E",
+        "green": "#2A5A75",
+        "brown": "#A14830",
+        "black": "#000000"
+      },
+      "sizes": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        41,
+        42
+      ],
+      "videos": [
+        "prod05.png"
+      ],
+      "images": [
+        "prod05.png",
+        "prod06.png",
+        "prod07.png",
+        "prod08.png"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bolsa Tressê Rolotê",
+      "code": "RT 0570 | 03.07.0653",
+      "price": "204.90",
+      "discount": "300",
+      "colors": {},
+      "sizes": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "videos": [
+        "prod09.png"
+      ],
+      "images": [
+        "prod09.png",
+        "prod10.png",
+        "prod11.png",
+        "prod12.png"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Methacrylate high heel",
+      "code": "RT 0571 | 03.07.0653",
+      "price": "204.90",
+      "discount": "",
+      "colors": {
+        "fucsia": "#A9095E",
+        "brown": "#A14830",
+        "black": "#000000"
+      },
+      "sizes": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "videos": [],
+      "images": [
+        "prod13.png",
+        "prod14.png",
+        "prod15.png",
+        "prod16.png"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Sandália rasa cruzada",
+      "code": "RT 0572 | 03.07.0653",
+      "price": "204.90",
+      "discount": "",
+      "colors": {
+        "fucsia": "#A9095E",
+        "brown": "#A14830"
+      },
+      "sizes": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "videos": [],
+      "images": [
+        "prod17.png",
+        "prod18.png",
+        "prod19.png",
+        "prod20.png"
+      ]
+    }
+  ]
+}
