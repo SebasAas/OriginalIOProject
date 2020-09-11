@@ -256,7 +256,9 @@ function ProductImages({ currentProduct, setProductCart }) {
               </div>
             </div>
             <div className="product__info__wrapper__button">
-              <Button setPadding={5} text="Adicionar á Sacola" onClick={() => addToCart()} />
+              <button className="product__info__button__cart" onClick={() => addToCart()}>
+                Adicionar á Sacola
+              </button>
             </div>
           </div>
           <div className="product__image__info__descripcion">
