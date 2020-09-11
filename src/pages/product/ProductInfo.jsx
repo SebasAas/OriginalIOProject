@@ -7,7 +7,6 @@ import 'assets/css/product/ProductInfo.css';
 
 // Components
 import Modal from 'components/modal/Modal';
-import Button from 'components/button/Button';
 
 // Redux
 import { connect } from 'react-redux';

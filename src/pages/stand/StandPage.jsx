@@ -23,7 +23,7 @@ function StandPage({ products, setCurrentProduct }) {
     { breakPoint: { width: 280, item: 2 } }, //si el ancho es mayor a 280 (se van a mostrar 2 item)
     { breakPoint: { width: 600, item: 3 } }, //si el ancho es mayor a 600 (se van a mostrar 3 item)
     { breakPoint: { width: 1000, item: 4 } }, //si el ancho es mayor a 1000 (se van a mostrar 4 item)
-    { breakPoint: { width: 1400, item: 6 } } //si el ancho es mayor a 1400 (se van a mostrar 6 item)
+    { breakPoint: { width: 1600, item: 6 } } //si el ancho es mayor a 1400 (se van a mostrar 6 item)
   ]
 
   useEffect(() => {
