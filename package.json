@@ -21,9 +21,11 @@
     "json-server": "^0.16.1"
   },
   "scripts": {
+    "client-install": "npm install --prefix client",
+    "client": "npm start --prefix client",
     "json-server": "json-server --watch src/db/db.json --port 5000",
     "dev": "concurrently \"npm start\" \"node src/server/server.js\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm insall --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
