@@ -5,9 +5,9 @@ import {
 
 import axios from 'axios';
 
-export const getProducts = () => (dispatch) => {
+export const getProducts = () => async (dispatch) => {
 
-  axios.get(`${process.env.REACT_APP_FAKE_SERVER}/products`)
+  await axios.get(`${process.env.REACT_APP_FAKE_SERVER}/products`)
     .then(res => {
       if (res.status === 200) {
         dispatch({

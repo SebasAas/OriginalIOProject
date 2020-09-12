@@ -33,7 +33,8 @@
 .product__info__discount {
   font-size: 14px;
   text-decoration: line-through;
-  color: #E35442
+  color: #E35442;
+  margin: 0;
 }
 
 .product__info__discount__separator{
@@ -101,11 +102,32 @@
   color: white;
   width: 100%;
   font-size: 18px;
+  max-height: 300px;
+  height: 100%;
 }
 
 .product__info__product {
   margin-top: 30px;
   font-size: 14px;
+}
+
+@media (min-width: 0px) and (max-width: 377px) {
+  .product__info__price__discount {
+    height: auto;
+  }
+
+ .product__image__info__size__wrapper {
+   width: 260px;
+ } 
+
+ .product__info__size__available {
+  overflow: scroll hidden;
+  justify-content: flex-start;
+ }
+
+ .product__info__button__cart {
+  height: 50%;
+ }
 }
 
 @media (min-width: 0px) and (max-width: 790px) {

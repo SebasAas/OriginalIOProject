@@ -50,9 +50,6 @@
 }
 
 
-/* Aca termina  */
-
-
 .thumbnail-slider{
   display: flex;
   flex-direction: column;
@@ -102,3 +99,5 @@
 	background-color: green;
 	color:#ffffff;
 }
+
+/* Aca termina  */

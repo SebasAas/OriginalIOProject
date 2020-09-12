@@ -10,7 +10,7 @@ import ColorPalette from 'components/colorPalette/ColorPalette';
 import { connect } from 'react-redux';
 import { setCurrentProduct } from 'store/actions/productAction';
 
-function StandPage({ products, setCurrentProduct }) {
+function StandPage({ products, setCurrentProduct, isLoading }) {
   let container = useRef();
   let allBox;
   let containerWidth;
@@ -27,11 +27,13 @@ function StandPage({ products, setCurrentProduct }) {
   ]
 
   useEffect(() => {
+    if (isLoading) return;
     resizeElement();
-  }, [])
+  }, [isLoading])
 
   const resizeElement = () => {
 
+    if (container.current.children.length === 0) return;
     allBox = container.current.children;
     containerWidth = container.current.offsetWidth;
     for (let i = 0; i < responsive.length; i++) {
@@ -44,6 +46,8 @@ function StandPage({ products, setCurrentProduct }) {
   }
 
   const evalResizing = () => {
+
+    console.log(products)
 
     if (allBox === undefined) return;
 
@@ -116,19 +120,22 @@ function StandPage({ products, setCurrentProduct }) {
         <div id="container" ref={container}
           className="thumbnail-container">
           {
-            products.map(product => (
-              <div key={product.id} className="item">
-                <div key={product.id} className="stand__page__product__data" onClick={() => newCurrentProduct(product)}>
-                  <img src={require(`assets/images/stand/${product.images[0]}`)} alt="" />
-                  <div className="stand__page__product__info">
-                    <p>R$ {product.price}</p>
-                    <div style={{ display: 'flex' }}>
-                      <ColorPalette colors={product.colors} />
+            (isLoading) ?
+              <h1>Carregando...</h1>
+              :
+              products.map(product => (
+                <div key={product.id} className="item">
+                  <div key={product.id} className="stand__page__product__data" onClick={() => newCurrentProduct(product)}>
+                    <img src={require(`assets/images/stand/${product.images[0]}`)} alt="" />
+                    <div className="stand__page__product__info">
+                      <p>R$ {product.price}</p>
+                      <div style={{ display: 'flex' }}>
+                        <ColorPalette colors={product.colors} />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))
+              ))
           }
         </div>
       </div>
@@ -163,7 +170,8 @@ function StandPage({ products, setCurrentProduct }) {
 }
 
 const mapStateToProps = (state) => ({
-  products: state.product.products
+  products: state.product.products,
+  isLoading: state.product.isLoading
 })
 
 const mapDispatchToProps = {

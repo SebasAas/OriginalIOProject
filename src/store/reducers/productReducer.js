@@ -39,6 +39,7 @@ const initialState = {
       "prod04.png"
     ]
   },
+  isLoading: true,
 }
 
 export default function (state = initialState, action) {
@@ -46,7 +47,8 @@ export default function (state = initialState, action) {
     case FETCH_PRODUCT:
       return {
         ...state,
-        products: action.payload
+        products: action.payload,
+        isLoading: false
       }
     case SET_CURRENT_PRODUCT:
       return {
